@@ -33,12 +33,12 @@ public class StringAddCalculator {
         if (matcher.find()) {
             return splitUsingCustomDelimiter(matcher);
         }
-        return Arrays.asList(text.split(",|:"));
+        return List.of(text.split(",|:"));
     }
 
     private static List<String> splitUsingCustomDelimiter(Matcher matcher) {
         String customDelimiter = matcher.group(CUSTOM_DELIMITER_GROUP);
-        return Arrays.asList(matcher.group(NUMBERS_GROUP).split(Pattern.quote(customDelimiter)));
+        return List.of(matcher.group(NUMBERS_GROUP).split(Pattern.quote(customDelimiter)));
     }
 
     private static int calculateSum(List<String> tokens) {

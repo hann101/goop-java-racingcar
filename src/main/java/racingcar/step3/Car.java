@@ -2,13 +2,14 @@ package racingcar.step3;
 
 import java.util.Random;
 
-class Car {
+public class Car {
+
     private int position = 0;
+    private final static Random random = new Random();
 
     public void move() {
-        Random random = new Random();
         if (random.nextInt(10) >= 4) {
-            position++;
+            position += 1;
         }
     }
 

@@ -14,7 +14,7 @@ public class RaceTest {
     @ParameterizedTest
     @ValueSource(ints = {1, 4, 7, 16, 20})
     public void moveLengthCannotBeMoreThanAttempts(int input) {
-        race = new Race(input);
+        Race race = new Race(input);
         for (Car car : race.getCars()) {
             assertTrue(car.getPosition() <= input, "전진 횟수는 시도 횟수보다 클수 없다.");
         }

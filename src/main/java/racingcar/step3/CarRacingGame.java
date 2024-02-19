@@ -4,11 +4,10 @@ package racingcar.step3;
 public class CarRacingGame {
     public static void main(String[] args) {
 
-        int numberOfCars = InputView.getNumberOfCars();
-        Race race = new Race(numberOfCars);
+        InputDto inputDto = InputView.getNumberOfCarsAndAttempts();
 
-        int numberOfAttempts = InputView.getNumberOfAttempts();
-        race.start(numberOfAttempts);
+        Race race = new Race(inputDto.getNumberOfCars());
+        race.start(inputDto.getNumberOfAttempts());
     }
 }
 
